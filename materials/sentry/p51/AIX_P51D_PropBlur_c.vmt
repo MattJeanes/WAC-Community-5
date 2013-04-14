@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "sentry/p51/AIX_P51D_PropBlur_c"
+	"$translucent" 1
+}

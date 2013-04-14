@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "sentry/a10/aix_a10_cockpit_c"
+	"$bumpmap" "sentry/a10/aix_a10_cockpit_b"
+}

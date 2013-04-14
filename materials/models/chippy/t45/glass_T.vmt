@@ -1,0 +1,17 @@
+"VertexLitGeneric"
+{
+	"$additive" 1
+
+	"$basetexture" "models\chippy\t45\glass_T"
+	"$envmap" "env_cubemap"
+	"$envmapcontrast" "1"
+	"$envmaptint" "[ 0.15 0.15 0.17 ]"
+	"$model" 1
+	"$halflambert" 1
+	"$bumpmap" "models\chippy\t45\glass_T_bump"
+	"$phong" "1"
+	"$phongexponent" "75"
+	"$phongboost" "1"	
+	"$phongfresnelranges"	"[ 1 6 15 ]"
+
+}

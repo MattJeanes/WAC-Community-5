@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/chippy/t45/T45C_1_T"
+	"$bumpmap" "models/chippy/t45/T45C_1_T_bump"
+}
