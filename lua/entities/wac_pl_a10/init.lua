@@ -8,7 +8,7 @@ function ENT:SpawnFunction(p, tr)
 	e.Owner = p
 	e:Spawn()
 	e:Activate()
-	e:SetSkin(math.random(0,2))
+	e:SetSkin(math.random(0,3))
 	return e
 end
 
