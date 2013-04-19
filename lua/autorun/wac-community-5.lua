@@ -82,3 +82,19 @@ sound.Add(
 	soundlevel = 100,
 	sound = "WAC/A10/internal.wav"
 })
+
+sound.Add(
+{
+	name = "BF109.External",
+	channel = CHAN_STATIC,
+	soundlevel = 180,
+	sound = "WAC/BF109/external.wav"
+})
+
+sound.Add(
+{
+	name = "BF109.Internal",
+	channel = CHAN_STATIC,
+	soundlevel = 100,
+	sound = "WAC/BF109/internal.wav"
+})

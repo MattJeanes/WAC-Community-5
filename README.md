@@ -15,3 +15,4 @@ In this pack you will find:
 • Boeing T-45C Goshawk  
 • Fairchild Republic A-10A Thunderbolt
 • North American Aviation P-51D Mustang
+• Messerschmitt BF-109E
