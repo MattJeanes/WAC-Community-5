@@ -5,7 +5,6 @@ ENT.Type 				= "anim"
 ENT.Category			= wac.aircraft.spawnCategory
 ENT.PrintName			= "Messerschmitt BF-109E"
 ENT.Author				= "SentryGunMan"
-ENT.AutomaticFrameAdvance = true
 
 ENT.Spawnable			= true
 ENT.AdminSpawnable		= true
