@@ -17,3 +17,4 @@ In this pack you will find:
 • North American Aviation P-51D Mustang
 • Messerschmitt BF-109E
 • Supermarine Spitfire V
+• Mitsubishi A6M2 Zero

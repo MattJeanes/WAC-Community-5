@@ -114,3 +114,19 @@ sound.Add(
 	soundlevel = 100,
 	sound = "WAC/Spitfire/internal.wav"
 })
+
+sound.Add(
+{
+	name = "A6M2.External",
+	channel = CHAN_STATIC,
+	soundlevel = 180,
+	sound = "WAC/A6M2/external.wav"
+})
+
+sound.Add(
+{
+	name = "A6M2.Internal",
+	channel = CHAN_STATIC,
+	soundlevel = 100,
+	sound = "WAC/A6M2/internal.wav"
+})
