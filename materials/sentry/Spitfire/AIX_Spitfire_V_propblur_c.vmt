@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "sentry/Spitfire/AIX_Spitfire_V_propblur_c"
+	"$translucent" 1
+}

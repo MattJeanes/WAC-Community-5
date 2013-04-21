@@ -98,3 +98,19 @@ sound.Add(
 	soundlevel = 100,
 	sound = "WAC/BF109/internal.wav"
 })
+
+sound.Add(
+{
+	name = "Spitfire.External",
+	channel = CHAN_STATIC,
+	soundlevel = 180,
+	sound = "WAC/Spitfire/external.wav"
+})
+
+sound.Add(
+{
+	name = "Spitfire.Internal",
+	channel = CHAN_STATIC,
+	soundlevel = 100,
+	sound = "WAC/Spitfire/internal.wav"
+})
