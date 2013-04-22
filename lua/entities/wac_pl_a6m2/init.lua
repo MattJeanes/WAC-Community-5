@@ -7,8 +7,7 @@ function ENT:SpawnFunction(ply, tr)
 	ent:SetPos(tr.HitPos+tr.HitNormal*10)
 	ent:Spawn()
 	ent:Activate()
-	Skin = math.random( 0, 1 );
-	ent:SetSkin(Skin)
+	ent:SetSkin(math.random(0,2))
 	ent.Owner=ply	
 	self.Sounds=table.Copy(sndt)
 	return ent
