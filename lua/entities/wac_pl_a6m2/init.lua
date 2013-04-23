@@ -28,6 +28,7 @@ ENT.Aerodynamics = {
 	},
 	Rail = Vector(1, 5, 20)
 }
+
 function ENT:CustomPhysicsUpdate(ph)
 	if self.rotorRpm > 0.8 and self.rotorRpm < 0.89 and IsValid(self.TopRotorModel) then
 		self.TopRotorModel:SetBodygroup(1,1)
@@ -38,7 +39,7 @@ function ENT:CustomPhysicsUpdate(ph)
 	end
 	
 	local geardown,t1=self:LookupSequence("geardown")
-	local gearup,t2=self:LookupSequence("gearup")	
+	local gearup=self:LookupSequence("gearup")	
 	local trace=util.QuickTrace(self:LocalToWorld(Vector(0,0,62)), self:LocalToWorld(Vector(0,0,50)), {self, self.Wheels[1], self.Wheels[2], self.Wheels[3], self.TopRotor})
 	local phys=self:GetPhysicsObject()
 	if IsValid(phys) and not self.disabled then
@@ -54,9 +55,8 @@ function ENT:CustomPhysicsUpdate(ph)
 		elseif self.upMul<0.6 and trace.HitPos:Distance( self:LocalToWorld(Vector(0,0,62)) ) > 50  and self:GetSequence() == gearup then
 			self:ResetSequence(geardown)
 			self:SetPlaybackRate(1.0)
-			geardown,time1=self:LookupSequence("gearup")
 
-			timer.Simple(time1,function()
+			timer.Simple(t1,function()
 				if self.Wheels then
 					for i=2,3 do 
 						self.Wheels[i]:SetRenderMode(RENDERMODE_NORMAL)
@@ -69,6 +69,7 @@ function ENT:CustomPhysicsUpdate(ph)
 		end
 	end
 end
+
 function ENT:AddRotor()
 	self.TopRotor = ents.Create("prop_physics")
 	self.TopRotor:SetModel("models/props_junk/sawblade001a.mdl")
@@ -117,4 +118,3 @@ function ENT:AddRotor()
 		self.EngineWeight.Entity = e
 	end
 end
-
