@@ -29,6 +29,10 @@ if CLIENT then
 	}
 end
 
+ENT.Agility = {
+	Thrust = 15
+}
+
 ENT.Wheels={
 	{
 		mdl="models/chippy/t45/fwheel.mdl",

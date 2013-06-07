@@ -30,6 +30,10 @@ if CLIENT then
 	}
 end
 
+ENT.Agility = {
+	Thrust = 10
+}
+
 ENT.Wheels={
 	{
 		mdl="models/sentry/spitfire_bw.mdl",

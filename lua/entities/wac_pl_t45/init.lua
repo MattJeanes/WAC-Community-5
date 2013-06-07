@@ -15,7 +15,7 @@ end
 
 ENT.Aerodynamics = {
 	Rotation = {
-		Front = Vector(0, 0, 0),
+		Front = Vector(0, -4, 0),
 		Right = Vector(0, 0, 20), -- Rotate towards flying direction
 		Top = Vector(0, -20, 0)
 	},
@@ -27,7 +27,7 @@ ENT.Aerodynamics = {
 	Rail = Vector(1, 5, 20),
 	Drag = {
 		Directional = Vector(0.01, 0.01, 0.01),
-		Angular = Vector(0.01, 0.01, 0.01)
+		Angular = Vector(0.03, 0.1, 0.03)
 	}
 }
 
