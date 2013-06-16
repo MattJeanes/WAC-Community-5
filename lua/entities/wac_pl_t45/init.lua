@@ -27,7 +27,7 @@ ENT.Aerodynamics = {
 	Rail = Vector(1, 5, 20),
 	Drag = {
 		Directional = Vector(0.01, 0.01, 0.01),
-		Angular = Vector(0.03, 0.1, 0.03)
+		Angular = Vector(0.1, 0.05, 0.01)
 	}
 }
 

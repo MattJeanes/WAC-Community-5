@@ -57,7 +57,26 @@ ENT.Seats = {
 	{
 		pos=Vector(3.5,0,90),
 		exit=Vector(3.5,60,100),
+		weapons={"MG17"}
     }
+}					
+
+ENT.Weapons = {
+	["MG17"] = {
+		class = "wac_pod_gatling",
+		info = {
+			Pods = {
+				Vector(90.5,-116.5,80.5),
+				Vector(90.5,116.5,80.5)
+			},
+			FireRate = 500,
+			Sequential = true,
+			Sounds = {
+				shoot = "WAC/bf109/gun.wav",
+				stop = "WAC/bf109/gun_stop.wav"
+			}
+		}
+	},
 }
 
 ENT.Sounds={

@@ -58,6 +58,27 @@ ENT.Seats = {
 	{
 		pos=Vector(2.5,0,70.23),
 		exit=Vector(10,59,85),
+		weapons={"Type 97 and Type 99-1"}
+	},
+}
+
+local Positions = { Vector(70,8.9,96), Vector(70,-8.9,96), Vector(67,-86.5,69), Vector(67,86.5,69) } 
+
+ENT.Weapons = {
+	["Type 97 and Type 99-1"] = {
+		class = "wac_pod_gatling",
+		info = {
+			Pods = {
+				Vector(67,-86.5,69),
+				Vector(67,86.5,69)
+			},
+			FireRate = 500,
+			Sequential = true,
+			Sounds = {
+				shoot = "WAC/a6m2/gun2.wav",
+				stop = "WAC/a6m2/gun2_stop.wav"
+			}
+		}
 	},
 }
 

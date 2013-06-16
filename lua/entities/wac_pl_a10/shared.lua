@@ -61,6 +61,35 @@ ENT.Seats = {
 	{
 		pos=Vector(126.5,1,100),
 		exit=Vector(126.5,70,20),
+		weapons={"GAU-8 Avenger", "Hydra 70"}
+	},
+}
+
+ENT.Weapons = {
+	["GAU-8 Avenger"] = {
+		class = "wac_pod_gatling",
+		info = {
+			Pods = {
+				Vector(267.5,4,69),
+				Vector(267.5,4,69)
+			},
+			Ammo = 1175,
+			FireRate = 4000,
+			Sounds = {
+				shoot = "WAC/a10/gun.wav",
+				stop = "WAC/a10/gun_stop.wav"
+			}
+		}
+	},
+	["Hydra 70"] = {
+		class = "wac_pod_hydra",
+		info = {
+			Sequential = true,
+			Pods = {
+				Vector(7.5, -245.5, 54),
+				Vector(7.5, 248, 54)
+			},
+		},
 	},
 }
 
@@ -74,6 +103,33 @@ ENT.Sounds={
 	LowHealth="HelicopterVehicle/LowHealth.mp3",
 	CrashAlarm="HelicopterVehicle/CrashAlarm.mp3"
 }
+
+// heatwave
+if CLIENT then
+	local cureffect=0
+	function ENT:Think()
+		self:base("wac_pl_base").Think(self)
+		local throttle = self:GetNWFloat("up", 0)
+		local active = self:GetNWBool("active", false)
+		local ent=LocalPlayer():GetVehicle():GetNWEntity("wac_aircraft")
+		if ent==self and active and throttle > 0.2 and CurTime()>cureffect then
+			cureffect=CurTime()+0.02
+			local ed=EffectData()
+			ed:SetEntity(self)
+			ed:SetOrigin(Vector(-260,57.4,129)) // offset
+			ed:SetMagnitude(throttle)
+			ed:SetRadius(25)
+			util.Effect("wac_heatwave", ed)
+			
+			local ed=EffectData()
+			ed:SetEntity(self)
+			ed:SetOrigin(Vector(-260,-57.4,129)) // offset
+			ed:SetMagnitude(throttle)
+			ed:SetRadius(25)
+			util.Effect("wac_heatwave", ed)
+		end
+	end
+end
 
 function ENT:DrawWeaponSelection() end
 

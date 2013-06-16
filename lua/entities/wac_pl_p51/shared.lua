@@ -58,7 +58,30 @@ ENT.Seats = {
 	{
 		pos=Vector(10,0,74.5),
 		exit=Vector(10,60,85),
+		weapons={"Browning M2"}
     }
+}							
+
+ENT.Weapons = {
+	["Browning M2"] = {
+		class = "wac_pod_gatling",
+		info = {
+			Pods = {
+				Vector(70,79.25,63),
+				Vector(70,-79.25,63),
+				Vector(70,88.25,63.5),
+				Vector(70,-88.25,63.5),
+				Vector(70,97.5,64.25),
+				Vector(70,-97.5,64.25),
+			},
+			FireRate = 500,
+			Sequential = true,
+			Sounds = {
+				shoot = "WAC/P51/gun.wav",
+				stop = "WAC/P51/gun_stop.wav"
+			}
+		}
+	},
 }
 
 ENT.Sounds={
