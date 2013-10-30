@@ -1,4 +1,7 @@
-if SERVER then AddCSLuaFile() end
+if SERVER then
+	AddCSLuaFile()
+	util.AddNetworkString("WAC-ModelDetailWarning")
+end
 
 local found=false
 local f=file.Find('wac/*.lua', "LUA")
@@ -32,5 +35,14 @@ timer.Simple(5,function()
 end)
 
 if not found then return end
+
+if CLIENT then
+	net.Receive("WAC-ModelDetailWarning", function()
+		if GetConVarNumber("r_rootlod")>0 then
+			chat.AddText(Color(255,62,62), "WARNING: ", Color(255,255,255), "The "..net.ReadString().." requires 'high' model detail.")
+			chat.PlaySound()
+		end
+	end)
+end
 
 if wac and wac.aircraft then wac.aircraft.spawnCategoryU = "WAC Unbreakable" end

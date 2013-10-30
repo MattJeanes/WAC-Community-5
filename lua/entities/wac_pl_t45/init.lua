@@ -10,6 +10,9 @@ function ENT:SpawnFunction(ply, tr)
 	ent:Activate()
 	ent.Owner=ply	
 	ent:SetSkin(math.random(0,3))
+	net.Start("WAC-ModelDetailWarning")
+		net.WriteString(self.PrintName)
+	net.Send(ply)
 	return ent
 end
 

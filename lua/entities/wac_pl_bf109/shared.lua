@@ -57,7 +57,7 @@ ENT.Seats = {
 	{
 		pos=Vector(3.5,0,90),
 		exit=Vector(3.5,60,100),
-		weapons={"MG17"}
+		weapons={"MG17", "Bomb"}
     }
 }					
 
@@ -77,6 +77,27 @@ ENT.Weapons = {
 			}
 		}
 	},
+	["Bomb"] = {
+		class = "wac_pod_bomb",
+		info = {
+			Pods = {
+				Vector(40,0,40),
+				Vector(40,30,40),
+				Vector(40,60,40),
+				Vector(40,90,40),
+				Vector(40,120,40),
+				Vector(40,150,40),
+				Vector(40,-30,40),
+				Vector(40,-60,40),
+				Vector(40,-90,40),
+				Vector(40,-120,40),
+				Vector(40,-150,40),
+			},
+			model="models/props_phx/ww2bomb.mdl",
+			reload=2,
+			mode=false,
+		}
+	}
 }
 
 ENT.Sounds={
@@ -91,5 +112,5 @@ ENT.Sounds={
 }
 
 
-function ENT:DrawPilotHud() end
-function ENT:DrawWeaponSelection() end
+//function ENT:DrawPilotHud() end
+//function ENT:DrawWeaponSelection() end
