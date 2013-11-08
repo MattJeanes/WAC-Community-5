@@ -57,7 +57,8 @@ ENT.Seats = {
 	{
 		pos=Vector(3.5,0,90),
 		exit=Vector(3.5,60,100),
-		weapons={"MG17", "Bomb"}
+		//weapons={"MG17", "Bomb"}
+		weapons={"MG17"}
     }
 }					
 
@@ -77,6 +78,7 @@ ENT.Weapons = {
 			}
 		}
 	},
+	/*
 	["Bomb"] = {
 		class = "wac_pod_bomb",
 		info = {
@@ -98,6 +100,7 @@ ENT.Weapons = {
 			mode=false,
 		}
 	}
+	*/
 }
 
 ENT.Sounds={

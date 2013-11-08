@@ -15,14 +15,14 @@ ENT.AutomaticFrameAdvance = true // needed for gear anims
 
 ENT.Aerodynamics = {
 	Rotation = {
-		Front = Vector(0, -0.075, 0),
-		Right = Vector(0, 0, 20), -- Rotate towards flying direction
-		Top = Vector(0, -20, 0)
+		Front = Vector(0, 0, 0),
+		Right = Vector(0, 0, 40), -- Rotate towards flying direction
+		Top = Vector(0, -40, 0)
 	},
 	Lift = {
-		Front = Vector(0, 0, 12.25), -- Go up when flying forward
+		Front = Vector(0, 0, 15), -- Go up when flying forward
 		Right = Vector(0, 0, 0),
-		Top = Vector(0, 0, -0.25)
+		Top = Vector(0, 0, -0.5)
 	},
 	Rail = Vector(1, 5, 20),
 	Drag = {

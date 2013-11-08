@@ -16,7 +16,7 @@ ENT.AutomaticFrameAdvance = true // needed for gear anims
 
 ENT.Aerodynamics = {
 	Rotation = {
-		Front = Vector(0, -6, 0),
+		Front = Vector(0, -2, 0),
 		Right = Vector(0, 0, 40), -- Rotate towards flying direction
 		Top = Vector(0, -40, 0)
 	},

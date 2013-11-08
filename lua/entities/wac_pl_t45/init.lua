@@ -18,7 +18,7 @@ end
 
 ENT.Aerodynamics = {
 	Rotation = {
-		Front = Vector(0, -4, 0),
+		Front = Vector(0, -1, 0),
 		Right = Vector(0, 0, 20), -- Rotate towards flying direction
 		Top = Vector(0, -20, 0)
 	},

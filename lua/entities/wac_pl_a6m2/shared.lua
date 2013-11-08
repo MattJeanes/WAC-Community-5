@@ -30,7 +30,7 @@ if CLIENT then
 end
 
 ENT.Agility = {
-	Thrust = 15
+	Thrust = 10
 }
 
 ENT.Wheels={
