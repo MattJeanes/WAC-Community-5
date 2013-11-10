@@ -68,7 +68,9 @@ ENT.Weapons = {
 		info = {
 			Pods = {
 				Vector(90.5,-116.5,80.5),
-				Vector(90.5,116.5,80.5)
+				Vector(90.5,116.5,80.5),
+				Vector(110.5,6,115.5),
+				Vector(110.5,-6,115.5)
 			},
 			FireRate = 500,
 			Sequential = true,

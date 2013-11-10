@@ -76,7 +76,7 @@ function ENT:PhysicsUpdate(ph)
 end
 
 function ENT:addRotors()
-	self:base("wac_pl_base").addRotors(self)
-	
-	self.rotorModel.TouchFunc=nil
+    self:base("wac_pl_base").addRotors(self)
+	self.rotorModel.TouchFunc = function() end
+    self.rotorModel:SetSolid(SOLID_NONE)
 end

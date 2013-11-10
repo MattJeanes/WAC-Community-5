@@ -78,6 +78,6 @@ end
 
 function ENT:addRotors()
 	self:base("wac_pl_base").addRotors(self)
-	
 	self.rotorModel.TouchFunc=nil
+	self.rotorModel:SetSolid(SOLID_NONE)
 end

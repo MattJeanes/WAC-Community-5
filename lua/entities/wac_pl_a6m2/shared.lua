@@ -62,15 +62,13 @@ ENT.Seats = {
 	},
 }
 
-local Positions = { Vector(70,8.9,96), Vector(70,-8.9,96), Vector(67,-86.5,69), Vector(67,86.5,69) } 
-
 ENT.Weapons = {
 	["Type 97 and Type 99-1"] = {
 		class = "wac_pod_gatling",
 		info = {
 			Pods = {
-				Vector(115,8.9,100),
-				Vector(115,-8.9,100),
+				Vector(70,8.9,96),
+				Vector(70,-8.9,96),
 				Vector(67,-86.5,69),
 				Vector(67,86.5,69)
 			},
