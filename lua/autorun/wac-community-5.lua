@@ -45,4 +45,4 @@ if CLIENT then
 	end)
 end
 
-if wac and wac.aircraft then wac.aircraft.spawnCategoryU = "WAC Unbreakable" end
+if wac and wac.aircraft then wac.aircraft.spawnCategoryC = "WAC Community" end

@@ -6,7 +6,7 @@ ENT.Type = "anim"
 
 ENT.PrintName = "Bomb Pod"
 ENT.Author = "Dr. Matt"
-ENT.Category = wac.aircraft.spawnCategory
+ENT.Category = wac.aircraft.spawnCategoryC
 ENT.Spawnable = false
 ENT.AdminSpawnable = false
 
@@ -42,7 +42,7 @@ if SERVER then
 			bomb.phys=bomb:GetPhysicsObject()
 			bomb.phys:SetMass(self.mass)
 			bomb.weld=constraint.Weld(bomb,self.aircraft,0,0,0,true)
-			bomb.nocollide=constraint.NoCollide(bomb,self.aircraft,0,0)
+			constraint.NoCollide(bomb,self.aircraft,0,0)
 			self.bombs[#self.bombs+1]=bomb
 			self.allbombs[#self.allbombs+1]=bomb
 		end
@@ -104,12 +104,10 @@ function ENT:dropBomb(bomb)
 	end
 	bomb.phys:AddVelocity(self.aircraft.phys:GetVelocity())
 	self.aircraft:EmitSound(self.Sounds.fire)
-	timer.Simple(0.5,function()
-		if bomb.nocollide then
-			bomb.nocollide:Remove()
-			bomb.nocollide=nil
+	timer.Simple(1,function()
+		if IsValid(bomb) then
+			bomb.dropping=true
 		end
-		bomb.dropping=true
 	end)
 end
 

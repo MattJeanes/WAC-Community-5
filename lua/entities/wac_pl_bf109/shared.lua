@@ -2,7 +2,7 @@ if not wac then return end
 if SERVER then AddCSLuaFile() end
 ENT.Base 				= "wac_pl_base"
 ENT.Type 				= "anim"
-ENT.Category			= wac.aircraft.spawnCategory
+ENT.Category			= wac.aircraft.spawnCategoryC
 ENT.PrintName			= "Messerschmitt BF-109E"
 ENT.Author				= "SentryGunMan"
 
@@ -57,8 +57,8 @@ ENT.Seats = {
 	{
 		pos=Vector(3.5,0,90),
 		exit=Vector(3.5,60,100),
-		//weapons={"MG17", "Bomb"}
-		weapons={"MG17"}
+		weapons={"MG17", "Bomb"}
+		//weapons={"MG17"}
     }
 }					
 
@@ -80,29 +80,19 @@ ENT.Weapons = {
 			}
 		}
 	},
-	/*
+	--/*
 	["Bomb"] = {
 		class = "wac_pod_bomb",
 		info = {
 			Pods = {
 				Vector(40,0,40),
-				Vector(40,30,40),
-				Vector(40,60,40),
-				Vector(40,90,40),
-				Vector(40,120,40),
-				Vector(40,150,40),
-				Vector(40,-30,40),
-				Vector(40,-60,40),
-				Vector(40,-90,40),
-				Vector(40,-120,40),
-				Vector(40,-150,40),
 			},
 			model="models/props_phx/ww2bomb.mdl",
 			reload=2,
 			mode=false,
 		}
 	}
-	*/
+	--*/
 }
 
 ENT.Sounds={

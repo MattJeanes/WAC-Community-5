@@ -2,7 +2,7 @@ if not wac then return end
 if SERVER then AddCSLuaFile('shared.lua') end
 ENT.Base 				= "wac_pl_base"
 ENT.Type 				= "anim"
-ENT.Category			= wac.aircraft.spawnCategory
+ENT.Category			= wac.aircraft.spawnCategoryC
 ENT.PrintName			= "P-51D Mustang"
 ENT.Author				= "SentryGunMan"
 
@@ -58,7 +58,7 @@ ENT.Seats = {
 	{
 		pos=Vector(10,0,74.5),
 		exit=Vector(10,60,85),
-		weapons={"Browning M2"}
+		weapons={"Browning M2", "Bomb"}
     }
 }							
 
@@ -82,6 +82,18 @@ ENT.Weapons = {
 			}
 		}
 	},
+	["Bomb"] = {
+		class = "wac_pod_bomb",
+		info = {
+			Pods = {
+				Vector(40,-104,44),
+				Vector(40,104,44),
+			},
+			model="models/props_phx/ww2bomb.mdl",
+			reload=2,
+			mode=false,
+		}
+	}
 }
 
 ENT.Sounds={
