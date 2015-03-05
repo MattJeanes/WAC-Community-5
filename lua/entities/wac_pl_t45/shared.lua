@@ -83,14 +83,17 @@ if CLIENT then
 		self:base("wac_pl_base").Think(self)
 		local throttle = self:GetNWFloat("up", 0)
 		local active = self:GetNWBool("active", false)
-		local ent=LocalPlayer():GetVehicle():GetNWEntity("wac_aircraft")
-		if ent==self and active and throttle > 0.2 and CurTime()>cureffect then
-			cureffect=CurTime()+0.02
-			local ed=EffectData()
-			ed:SetEntity(self)
-			ed:SetOrigin(Vector(-180,0,-1.25)) // offset
-			ed:SetMagnitude(throttle)
-			util.Effect("wac_heatwave", ed)
+		local v=LocalPlayer():GetVehicle()
+		if IsValid(v) then
+			local ent=v:GetNWEntity("wac_aircraft")
+			if ent==self and active and throttle > 0.2 and CurTime()>cureffect then
+				cureffect=CurTime()+0.02
+				local ed=EffectData()
+				ed:SetEntity(self)
+				ed:SetOrigin(Vector(-180,0,-1.25)) // offset
+				ed:SetMagnitude(throttle)
+				util.Effect("wac_heatwave", ed)
+			end
 		end
 	end
 end
